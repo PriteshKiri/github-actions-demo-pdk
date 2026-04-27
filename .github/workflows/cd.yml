@@ -17,8 +17,7 @@ jobs:
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
-        password: ${{ secrets.SSH_PASSWORD }}
-        port: 22
+        key: ${{ secrets.SSH_PASSWORD }}
         script: |
           cd ~/github-actions-demo
           git pull origin main
